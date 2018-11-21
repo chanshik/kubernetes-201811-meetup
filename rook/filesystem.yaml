@@ -1,0 +1,18 @@
+apiVersion: ceph.rook.io/v1beta1
+kind: Filesystem
+metadata:
+  name: k8s-fs
+  namespace: rook-ceph
+spec:
+  metadataPool:
+    replicated:
+      size: 2
+  dataPools:
+    - failureDomain: osd
+      replicated:
+        size: 2
+  metadataServer:
+    activeCount: 1
+    activeStandby: true
+    placement:
+    resources:

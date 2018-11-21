@@ -1,0 +1,38 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: ghost
+spec:
+  template:
+    metadata:
+      labels:
+        k8s-app: ghost
+    spec:
+      containers:
+      - name: ghost
+        volumeMounts:
+        - name: ghost-volume
+          mountPath: "/var/lib/ghost/content"
+        image: ghost:2
+        env:
+        - name: database__client
+          value: "mysql"
+        - name: database__connection__host
+          value: "mysql"
+        - name: database__connection__user
+          value: "root"
+        - name: database__connection__database
+          value: "ghost"
+        - name: database__connection__password
+          value: "changeme"
+        ports:
+        - containerPort: 2368
+      volumes:
+      - name: ghost-volume
+        flexVolume:
+          driver: ceph.rook.io/rook
+          fsType: ceph
+          options:
+            fsName: k8s-fs
+            clusterNamespace: rook-ceph
+            path: /ghost

@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    k8s-app: nginx-fs
+  name: nginx-fs
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      k8s-app: nginx-fs
+  template:
+    metadata:
+      labels:
+        k8s-app: nginx-fs
+      name: nginx-fs
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        volumeMounts:
+        - name: k8s-root
+          mountPath: /tmp/fs
+      nodeSelector:
+        app: "yes"
+      volumes:
+      - name: k8s-root
+        flexVolume:
+          driver: ceph.rook.io/rook
+          fsType: ceph
+          options:
+            fsName: k8s-fs
+            clusterNamespace: rook-ceph
+            path: /

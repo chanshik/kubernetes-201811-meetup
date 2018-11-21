@@ -1,0 +1,43 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: redis-pv-1
+  labels:
+    type: local
+spec:
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/media/data/redis"
+
+---
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: redis-pv-2
+  labels:
+    type: local
+spec:
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/media/data/redis"
+
+---
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: redis-pv-3
+  labels:
+    type: local
+spec:
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/media/data/redis"
