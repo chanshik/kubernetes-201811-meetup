@@ -1,4 +1,4 @@
-# Purpose
+# Kubernetes Hands-on with VM
 
 VM 환경 (Virtualbox) 에서 Kubernetes 클러스터를 직접 구축하는 실습을 진행합니다. 
 
@@ -1544,4 +1544,8 @@ mysql> show tables;
 # Summary
 
 IDC 혹은 로컬 네트워크에서 **Kubernetes** 클러스터를 구축하고 사용할 경우에는 **Rook**, **Ceph**, **Metallb** 등을 활용하여 **Cloud Native** 한 환경을 구축해볼 수 있습니다. **Rook** 과 **Ceph** 를 이용해 특정 노드에 종속적인 **Persistent Volume** 을 생성하고 사용해야하는 제약을 극복할 수 있습니다.  마지막으로 **Metallb** 를 이용해 외부에서 Kubernetes 클러스터에 배포되어 있는 서비스를 연결하는데 도움을 받을 수 있습니다.
+
+실습 내용에 대하여 부족하거나 보완해야할 점이 있다면 있다면 메일로 보내주세요. 감사합니다.
+
+임찬식 (chanshik@gmail.com) 
 
