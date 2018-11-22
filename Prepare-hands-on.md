@@ -30,6 +30,20 @@ END
 
 
 
+## Vagrant Box
+
+### USB
+
+`USB/ubuntu-VAGRANTSLASH-bionic64` 디렉토리를 `~/.vagrant.d/boxes` 안으로 복사합니다.
+
+
+
+## Web
+
+강의장에서 알려준 IP 로 접속해 `/box/ubuntu-VAGRANTSLASH-bionic64.tgz` 파일을 받아서 압축을 풀고, `~/.vagrant.d/boxes` 안으로 복사합니다.
+
+
+
 ## Docker Images
 
 Vagrant 를 이용해 VM 을 실행하면, `/vagrant` 디렉토리를 통해 `kubernetes-201811-meetup` 디렉토리에 접근할 수 있습니다. Docker 이미지를 받은 이후에 작업은 VM 내부에서 진행합니다.
