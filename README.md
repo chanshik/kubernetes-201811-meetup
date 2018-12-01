@@ -644,9 +644,17 @@ kubectl get deploy
 
 NAME    DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
 nginx   1         1         1            0           12s
-nginx$ kubectl create -f nginx-svc.yaml
+```
+
+```bash
+kubectl create -f nginx/nginx-svc.yaml
+
 service/nginx-svc created
-nginx$ kubectl get svc
+```
+
+```bash
+kubectl get svc
+
 NAME         TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
 kubernetes   ClusterIP   10.96.0.1        <none>        443/TCP        117m
 nginx-svc    NodePort    10.109.129.149   <none>        80:31000/TCP   3s
