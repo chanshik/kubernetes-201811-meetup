@@ -54,7 +54,7 @@ EOF
         sudo apt update
         sudo apt install -y docker.io kubelet kubeadm kubectl ntp nfs-kernel-server
         sudo usermod -aG docker vagrant
-
+        sudo systemctl enable docker.service
         sudo sed -i '/k8s/d' /etc/hosts
         sudo echo "#{node_subnet}.#{i + 1} k8s-#{i}" | sudo tee -a /etc/hosts
 
