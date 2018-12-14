@@ -148,6 +148,7 @@ deb http://apt.kubernetes.io/ kubernetes-xenial main
 EOF'
         sudo apt update
         sudo apt install -y docker.io kubelet kubeadm kubectl ntp nfs-kernel-server
+        sudo systemctl enable docker.service
         sudo usermod -aG docker vagrant
 
         sudo sed -i '/k8s/d' /etc/hosts
