@@ -410,7 +410,7 @@ taint "node-role.kubernetes.io/master:" not found
 Kubernetes 를 편하게 사용하기 위해 Dashboard 를 설치합니다.
 
 ```bash
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/master/src/deploy/recommended/kubernetes-dashboard.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/master/aio/deploy/recommended/kubernetes-dashboard.yaml
 
 secret/kubernetes-dashboard-certs created
 serviceaccount/kubernetes-dashboard created
