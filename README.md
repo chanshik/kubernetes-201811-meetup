@@ -1671,7 +1671,7 @@ ghost   1         1         1            1           6m9s
 MySQL 에 테이블이 제대로 생성되었는지 확인해봅니다.
 
 ```bash
-mysql -uroot -p -h 10.254.1.153
+mysql -uroot -p -h 10.254.1.154
 
 Enter password:
 Welcome to the MySQL monitor.  Commands end with ; or \g.
