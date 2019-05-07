@@ -1571,7 +1571,7 @@ drwxr-xr-x 1 root root    2 Nov 18 15:15 minio
 MySQL 에 접속하여 사용할 데이터베이스를 생성합니다.
 
 ```bash
-mysql -uroot -p -h 10.254.1.153
+mysql -uroot -p -h 10.254.1.154
 
 Enter password:
 Welcome to the MySQL monitor.  Commands end with ; or \g.
