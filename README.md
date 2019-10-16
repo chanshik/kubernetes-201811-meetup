@@ -363,7 +363,7 @@ clusterrolebinding.rbac.authorization.k8s.io/calico-node created
 ```
 
 ```bash
-kubectl apply -f https://docs.projectcalico.org/v3.3/getting-started/kubernetes/installation/hosted/kubernetes-datastore/calico-networking/1.7/calico.yaml
+kubectl apply -f https://docs.projectcalico.org/v3.9/getting-started/kubernetes/installation/hosted/kubernetes-datastore/calico-networking/1.7/calico.yaml
 
 configmap/calico-config created
 service/calico-typha created
